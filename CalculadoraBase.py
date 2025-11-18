@@ -19,6 +19,10 @@ def potencia(a: float, b: float) -> float:
     """Calcula a elevado a la b."""
     return a ** b
 
+def elevar_al_cubo(a: float) -> float:
+    """Calcula el cubo de un número."""
+    return a ** 3
+
 def main():
     print("Calculadora básica")
     
@@ -33,8 +37,9 @@ def main():
     print("3. Multiplicación")
     print("4. División")
     print("5. Potencia")
-    
-    opcion = input("Selecciona la operación (1/2/3/4/5): ")
+    print("6. Elevar al cubo (del primer número)")
+
+    opcion = input("Selecciona la operación (1/2/3/4/5/6): ")
     
     if opcion == "1":
         print(f"Resultado: {suma(num1, num2)}")
@@ -46,6 +51,8 @@ def main():
         print(f"Resultado: {division(num1, num2)}")
     elif opcion == "5":
         print(f"Resultado: {potencia(num1, num2)}")
+    elif opcion == "6":
+        print(f"Resultado: {elevar_al_cubo(num1)}")
     else:
         print("Opción no válida")
 
